@@ -30,12 +30,11 @@ public class Utils {
 			connection.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
 			connection.setDoOutput(true);
 			connection.setUseCaches(false);
+			
 			connection.setRequestMethod("POST");
-			// connection.setRequestProperty("Content-Type",
-			// "application/x-www-form-urlencoded");
-			// If using a XML post content:
 			connection.setRequestProperty("Content-Type", "text/xml");
 			connection.setRequestProperty("Content-Length", String.valueOf(content.length));
+			
 			OutputStream os = null;
 			os = connection.getOutputStream();
 			os.write(content);

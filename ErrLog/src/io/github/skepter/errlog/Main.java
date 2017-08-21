@@ -30,6 +30,7 @@ public class Main extends JavaPlugin implements Listener {
 
 	HashSet<Player> listeners;
 	HashMap<Integer, Throwable> errors;
+	HashMap<Integer, String> cachedErrors;
 
 	public static Main INSTANCE;
 	
@@ -38,6 +39,7 @@ public class Main extends JavaPlugin implements Listener {
 		INSTANCE = this;
 		listeners = new HashSet<Player>();
 		errors = new HashMap<Integer, Throwable>();
+		cachedErrors = new HashMap<Integer, String>();
 		Utils.readFile();
 
 		getServer().getPluginManager().registerEvents(this, this);
@@ -202,7 +204,19 @@ public class Main extends JavaPlugin implements Listener {
 				}
 			}
 		} else if(label.equalsIgnoreCase("errupload")) {
-			Throwable throwable = errors.get(Integer.parseInt(args[0]));
+			if(args.length != 1) {
+				sender.sendMessage("Argument length incorrect");
+				return true;
+			}
+					
+			int errorID = Integer.parseInt(args[0]);
+			Throwable throwable = errors.getOrDefault(errorID, null);
+			
+			if(throwable == null) {
+				sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE + "] " + cachedErrors.get(errorID));
+				return true;
+			}
+			
 			//remove int from errors or something?
 			StringWriter strWriter = new StringWriter();
 			PrintWriter writer = new PrintWriter(strWriter);
@@ -215,6 +229,8 @@ public class Main extends JavaPlugin implements Listener {
 				public void run() {
 					try {
 						String link = Utils.post(strWriter.toString());
+						cachedErrors.put(errorID, link);
+						errors.remove(errorID);
 						Bukkit.getScheduler().runTask(instance, new Runnable() {
 
 							@Override
