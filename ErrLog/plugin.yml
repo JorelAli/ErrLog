@@ -1,0 +1,14 @@
+name: ErrLog
+main: io.github.skepter.errlog.Main
+version: 0.2-BETA
+description: Allows you to view the console
+author: Skepter
+website: http://skepter.github.io/
+
+commands:
+   errlog:
+     description: Allows you to view errors.
+     permission: errlog.use
+   errupload:
+     description: Uploads errors to hastebin
+     permission: errlog.use
