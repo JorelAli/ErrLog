@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.file.Files;
 import java.util.HashSet;
 
@@ -14,7 +15,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class Utils {
-
 
 	/*
 	 * Uploads inputString to hastebin then returns the link to the haste
@@ -30,11 +30,11 @@ public class Utils {
 			connection.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
 			connection.setDoOutput(true);
 			connection.setUseCaches(false);
-			
+
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("Content-Type", "text/xml");
 			connection.setRequestProperty("Content-Length", String.valueOf(content.length));
-			
+
 			OutputStream os = null;
 			os = connection.getOutputStream();
 			os.write(content);
@@ -85,6 +85,42 @@ public class Utils {
 			Files.write(file.toPath(), playerNames);
 		} catch (IOException e) {
 		}
-	}	
+	}
+
+	public static String pluginSearcher(Class<?> clazz) {
+		InputStream is = getPluginYAML(clazz);
+		if (is == null) {
+			return "Unknown plugin";
+		} else {
+			byte[] buf = new byte[256];
+			int pointer = 0;
+			int b;
+			try {
+				while ((b = is.read()) != 10) {
+					buf[pointer] = (byte) b;
+					pointer++;
+				}
+			} catch (IOException e) {
+				return "Unknown plugin";
+			}
+			return new String(buf).trim().substring(6);
+		}
+	}
+	
+	private static InputStream getPluginYAML(Class<?> clazz) {
+		try {
+			URL url = clazz.getClassLoader().getResource("plugin.yml");
+
+			if (url == null) {
+				return null;
+			}
+
+			URLConnection connection = url.openConnection();
+			connection.setUseCaches(false);
+			return connection.getInputStream();
+		} catch (IOException localIOException) {
+		}
+		return null;
+	}
 
 }
