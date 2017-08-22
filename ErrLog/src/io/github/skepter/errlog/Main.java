@@ -48,6 +48,7 @@ public class Main extends JavaPlugin implements Listener {
 	
 	protected void openInventories(int errorID) {
 		for (Player p : listeners) {
+			//TODO remove this whole section
 			p.openInventory(InventoryHandler.getInventory(errorID));
 		}
 	}
