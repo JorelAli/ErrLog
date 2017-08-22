@@ -24,6 +24,8 @@ public class Main extends JavaPlugin implements Listener {
 	HashMap<Integer, Long> errorTimes;
 
 	public static Main INSTANCE;
+	
+	//errlogs to view all errors since restart
 
 	@Override
 	public void onEnable() {
@@ -43,13 +45,6 @@ public class Main extends JavaPlugin implements Listener {
 		// Add logger handler
 		while (loggerNames.hasMoreElements()) {
 			Logger.getLogger(loggerNames.nextElement()).addHandler(new LoggingHandler());
-		}
-	}
-	
-	protected void openInventories(int errorID) {
-		for (Player p : listeners) {
-			//TODO remove this whole section
-			p.openInventory(InventoryHandler.getInventory(errorID));
 		}
 	}
 
@@ -142,7 +137,7 @@ public class Main extends JavaPlugin implements Listener {
 			}
 
 			int errorID = Integer.parseInt(args[0]);
-			openInventories(errorID);
+			((Player) sender).openInventory(InventoryHandler.getInventory(errorID));
 			return true;
 //			Throwable throwable = errors.getOrDefault(errorID, null);
 //

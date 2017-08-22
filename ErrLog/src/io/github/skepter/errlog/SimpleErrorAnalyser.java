@@ -30,7 +30,6 @@ public class SimpleErrorAnalyser {
 			errorDescription.add(ChatColor.WHITE + " An error which occurs when trying");
 			errorDescription.add(ChatColor.WHITE + " to access a list badly");
 			errorDescription.add(ChatColor.WHITE + "");
-			
 		} else if(cause instanceof ClassCastException) {
 			errorDescription.add(ChatColor.GREEN + "ClassCastException:");
 			errorDescription.add(ChatColor.WHITE + " An error which occurs when the original");

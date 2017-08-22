@@ -1,0 +1,481 @@
+[22:21:27] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: okay
+[22:21:27] [Async Chat Thread - #3/INFO]: [Member] {jobs}TreeHuggers: first
+[22:21:31] [Async Chat Thread - #3/INFO]: [Member] {jobs}TreeHuggers: btw
+[22:21:33] [Async Chat Thread - #3/INFO]: [Member] {jobs}TreeHuggers: this is GMX
+[22:21:34] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: do whatever you wanna do first
+[22:21:36] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: that's fine
+[22:21:37] [Server thread/INFO]: TreeHuggers issued server command: /manuadd TreeHuggers helper
+[22:21:38] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: idrc
+[22:21:52] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: are you ready?
+[22:21:58] [Async Chat Thread - #3/INFO]: [Member] {jobs}TreeHuggers: yeah
+[22:22:02] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: [1] use /errlog
+[22:22:03] [Server thread/INFO]: TreeHuggers issued server command: /manuadd TreeHuggers admin
+[22:22:06] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: .
+[22:22:09] [Server thread/INFO]: TreeHuggers issued server command: /errlog
+[22:22:15] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: I am now viewing console
+[22:22:17] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: good
+[22:22:18] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: now,
+[22:22:20] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: behold:
+[22:22:23] [Server thread/INFO]: Skepter issued server command: /errlog err1
+[22:22:23] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errlog' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at io.github.skepter.errlog.Main.onCommand(Main.java:127) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:22:29] [Server thread/INFO]: TreeHuggers issued server command: /tp skep
+[22:22:35] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: I see it
+[22:22:38] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: click it
+[22:22:44] [Server thread/INFO]: TreeHuggers issued server command: /errupload -1108501120
+[22:23:28] [Server thread/INFO]: TreeHuggers issued server command: /errupload -1108501120
+[22:23:35] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: Nice!
+[22:23:41] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: try the upload to hastebin
+[22:23:46] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: it didn't work
+[22:23:49] [Server thread/INFO]: Skepter issued server command: /errupload -1108501120
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:23:54] [Craft Scheduler Thread - 3458/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4369
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:23:57] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: didn't do anything
+[22:23:57] [Server thread/INFO]: Skepter issued server command: /errupload -1351454655
+[22:23:57] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errupload' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.InventoryHandler.getInventory(InventoryHandler.java:104) ~[?:?]
+	at io.github.skepter.errlog.Main.openInventories(Main.java:51) ~[?:?]
+	at io.github.skepter.errlog.Main.onCommand(Main.java:144) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:23:58] [Server thread/INFO]: Skepter issued server command: /errupload -1905752076
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:23:59] [Craft Scheduler Thread - 3459/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4376
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:00] [Server thread/INFO]: Skepter issued server command: /errupload -587331797
+[22:24:00] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errupload' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.InventoryHandler.getInventory(InventoryHandler.java:104) ~[?:?]
+	at io.github.skepter.errlog.Main.openInventories(Main.java:51) ~[?:?]
+	at io.github.skepter.errlog.Main.onCommand(Main.java:144) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3460/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4377
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:02] [Craft Scheduler Thread - 3461/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4378
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:02] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: Why so many errors
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3462/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4379
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3463/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4380
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3464/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4381
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:03] [Craft Scheduler Thread - 3465/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4382
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:03] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: ah poo
+[22:24:04] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: ERM
+[22:24:05] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: HELP
+[22:24:07] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: XD
+[22:24:10] [Server thread/INFO]: Skepter issued server command: /errupload -553756418
+[22:24:10] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errupload' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.InventoryHandler.getInventory(InventoryHandler.java:104) ~[?:?]
+	at io.github.skepter.errlog.Main.openInventories(Main.java:51) ~[?:?]
+	at io.github.skepter.errlog.Main.onCommand(Main.java:144) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:24:13] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: oh poo
+[22:24:16] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: :P
+[22:24:19] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: oh yeah
+[22:24:21] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: looks nice!
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:21] [Craft Scheduler Thread - 3466/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4389
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:23] [Server thread/INFO]: TreeHuggers issued server command: /errupload -1843828647
+[22:24:23] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errupload' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.InventoryHandler.getInventory(InventoryHandler.java:104) ~[?:?]
+	at io.github.skepter.errlog.Main.openInventories(Main.java:51) ~[?:?]
+	at io.github.skepter.errlog.Main.onCommand(Main.java:144) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:24:25] [Craft Scheduler Thread - 3467/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4391
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:24:25] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: was worried that would happen eventually
+[22:24:30] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: but I think you get the idea :D
+[22:24:32] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: eyah
+[22:24:33] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: yeah!
+[22:24:37] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: it's still in beta
+[22:24:39] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: erm
+[22:24:40] [Server thread/INFO]: TreeHuggers fell out of the world
+[22:24:47] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: GMX works nice
+[22:24:51] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: :)
+[22:25:04] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: hm
+[22:25:13] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: I wonder if I can get a copy of the console log right now
+[22:25:20] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: because all those errors will help me fix this error plugin
+[22:25:25] [Server thread/INFO]: TreeHuggers issued server command: /gmc
+[22:25:27] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: or, we just reload it (it's plugman safe)
+[22:25:29] [Server thread/INFO]: Skepter issued server command: /plugman reload errlog
+[22:25:29] [Server thread/INFO]: [ErrLog] Disabling ErrLog v0.9-BETA
+[22:25:31] [Server thread/INFO]: [ErrLog] Enabling ErrLog v0.9-BETA
+[22:25:33] [Server thread/INFO]: Skepter issued server command: /errlog
+[22:25:34] [Server thread/INFO]: Skepter issued server command: /errlog
+[22:25:37] [Server thread/INFO]: Skepter issued server command: /errlog err2
+[22:25:37] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errlog' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.Main.onCommand(Main.java:131) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:25:38] [Server thread/INFO]: Skepter issued server command: /errupload -865434580
+[22:25:45] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: hum de dum
+[22:25:49] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: sometimes it opens the inventory when I don't click
+[22:25:51] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: yeah
+[22:25:55] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: I fixed that in the latest version
+[22:25:59] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: gerrie helped me spot that
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: java.io.IOException: Server returned HTTP response code: 503 for URL: https://hastebin.com/documents
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at io.github.skepter.errlog.Utils.post(Utils.java:43)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[22:26:12] [Craft Scheduler Thread - 3461/WARN]: [ErrLog] Plugin ErrLog v0.9-BETA generated an exception while executing task 4403
+java.lang.NullPointerException: null
+	at io.github.skepter.errlog.Utils.post(Utils.java:54) ~[?:?]
+	at io.github.skepter.errlog.InventoryHandler$1.run(InventoryHandler.java:55) ~[?:?]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftTask.run(CraftTask.java:71) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:52) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_141]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+[22:26:16] [Server thread/INFO]: Skepter issued server command: /errupload -1998362374
+[22:26:16] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'errupload' in plugin ErrLog v0.9-BETA
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:647) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1386) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1221) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_141]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_141]
+	at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [custom.jar:git-Spigot-5340a52-e1f296d]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_141]
+Caused by: java.lang.NullPointerException
+	at io.github.skepter.errlog.InventoryHandler.getInventory(InventoryHandler.java:104) ~[?:?]
+	at io.github.skepter.errlog.Main.openInventories(Main.java:51) ~[?:?]
+	at io.github.skepter.errlog.Main.onCommand(Main.java:144) ~[?:?]
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[custom.jar:git-Spigot-5340a52-e1f296d]
+	... 15 more
+[22:26:18] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: does the info for non-developers help?
+[22:26:22] [Server thread/INFO]: TreeHuggers issued server command: /errupload -1412938145
+[22:26:33] [pool-11-thread-1/INFO]: GroupManager - INFO -  Data files refreshed.
+[22:26:37] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: yes
+[22:26:44] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: does it work with skript?
+[22:26:57] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: no
+[22:27:03] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: ok
+[22:27:10] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: skript is harder to use
+[22:27:30] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: because Skript handles it all by itself, I can't use my fancy techniques of checking which plugin caused the issue
+[22:27:39] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: and explaining what the issues are
+[22:27:51] [Server thread/INFO]: Skepter issued server command: /errupload -1412938145
+[22:27:57] [Server thread/INFO]: Skepter issued server command: /save-all
+[22:28:25] [Server thread/INFO]: Skepter issued server command: /spigot:
+[22:28:35] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: well
+[22:28:36] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: lots of error logs
+[22:28:41] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: I need those error logs :P
+[22:28:47] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: mind sending me them?
+[22:28:48] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: XD
+[22:29:08] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: these error logs will help me fix errors and subsequently, help reduce errors (which makes no sense)
+[22:29:21] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: file too big to copy and paste to hastebin
+[22:29:24] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: it's fine
+[22:29:29] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: can you send me the file on discord?
+[22:29:31] [Async Chat Thread - #3/INFO]: [Admin] {jobs}TreeHuggers: I'll send you the file via discord?
+[22:29:36] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: how do you download it?
+[22:29:39] [Server thread/INFO]: Skepter issued server command: /feed
+[22:29:50] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: ah
+[22:29:53] [Async Chat Thread - #3/INFO]: [Member] {jobs}Skepter: wat.
