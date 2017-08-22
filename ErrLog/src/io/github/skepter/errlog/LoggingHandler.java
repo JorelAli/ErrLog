@@ -74,6 +74,7 @@ public class LoggingHandler extends Handler {
 				
 				int errID = ThreadLocalRandom.current().nextInt();
 				Main.INSTANCE.errors.put(errID, record.getThrown());
+				Main.INSTANCE.errorTimes.put(errID, System.currentTimeMillis());
 
 				message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
 						new ComponentBuilder(componentString).create()));

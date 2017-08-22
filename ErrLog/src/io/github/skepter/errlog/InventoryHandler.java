@@ -1,10 +1,14 @@
 package io.github.skepter.errlog;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.nio.file.Files;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -26,13 +30,10 @@ public class InventoryHandler implements Listener {
 	public void invClick(InventoryClickEvent event) {
 		if(event.getInventory().getTitle().contains(" Error")) {
 			event.setCancelled(true);
+			int errorID = Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
+			Throwable throwable  = Main.INSTANCE.errors.getOrDefault(errorID, null);
 			switch(event.getSlot()) {
-				case 1:
-					int errorID = Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
-					Throwable throwable  = Main.INSTANCE.errors.getOrDefault(errorID, null);
-					
-					
-
+				case 1: {
 					if (throwable == null) {
 						Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE + "] "
 								+ Main.INSTANCE.cachedErrors.get(errorID));
@@ -68,6 +69,28 @@ public class InventoryHandler implements Listener {
 
 					});
 					break;
+				}
+				case 3: {
+					File file = new File(Main.INSTANCE.getDataFolder(), "errorlog" + errorID + ".txt");
+					try {
+						boolean result = file.createNewFile();
+						if(result == false) {
+							Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "ErrLog" + ChatColor.WHITE + "] Error file already exists: /plugins/ErrLog/errorlog" + errorID + ".txt");
+							return;
+						}
+						
+						StringWriter strWriter = new StringWriter();
+						PrintWriter writer = new PrintWriter(strWriter);
+
+						throwable.printStackTrace(writer);
+						
+						Files.write(file.toPath(), strWriter.toString().getBytes());
+						Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "ErrLog" + ChatColor.WHITE + "] Error saved to /plugins/ErrLog/errorlog" + errorID + ".txt");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					break;
+				}
 				case 8:
 					event.getWhoClicked().closeInventory();
 					break;
@@ -105,6 +128,8 @@ public class InventoryHandler implements Listener {
 		inv.setItem(0, itemGenerator(Material.PAPER, "Plugin details", pluginDetails));
 		inv.setItem(1, itemGenerator(Material.WOOL, "Upload to Hastebin"));
 		inv.setItem(2, itemGenerator(Material.BOOK, "Error details", errorDetails(error)));
+		inv.setItem(3, itemGenerator(Material.BOOK_AND_QUILL, "Save error log to a file"));
+		inv.setItem(6, itemGenerator(Material.WATCH, "Time in which error occured", Arrays.asList(new SimpleDateFormat("hh:mm (ZZ) E d MM yyyy").format(new Date(Main.INSTANCE.errorTimes.get(errorID))))));
 		inv.setItem(8, itemGenerator(Material.BARRIER, "Close error log"));
 		
 		ItemStack is = new ItemStack(Material.SUGAR);

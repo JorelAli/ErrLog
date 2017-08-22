@@ -19,17 +19,18 @@ public class Main extends JavaPlugin implements Listener {
 	HashSet<Player> listeners;
 	HashMap<Integer, Throwable> errors;
 	HashMap<Integer, String> cachedErrors;
+	HashMap<Integer, Long> errorTimes;
 
 	public static Main INSTANCE;
 
 	@Override
 	public void onEnable() {
 		INSTANCE = this;
-		System.out.println(Utils.pluginSearcher(Utils.class));
 
 		listeners = new HashSet<Player>();
 		errors = new HashMap<Integer, Throwable>();
 		cachedErrors = new HashMap<Integer, String>();
+		errorTimes = new HashMap<Integer, Long>();
 		Utils.readFile();
 
 		getServer().getPluginManager().registerEvents(new InventoryHandler(), this);
