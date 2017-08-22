@@ -137,13 +137,13 @@ public class InventoryHandler implements Listener {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm (zz) E d MMM yyyy");
 		dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 		
-		inv.setItem(6, itemGenerator(Material.WATCH, "Time in which error occured", Arrays.asList(dateFormat.format(new Date(Main.INSTANCE.errorTimes.get(errorID))))));
+		inv.setItem(6, itemGenerator(Material.WATCH, "Time in which error occured", Arrays.asList(ChatColor.WHITE + dateFormat.format(new Date(Main.INSTANCE.errorTimes.get(errorID))))));
 		inv.setItem(8, itemGenerator(Material.BARRIER, "Close"));
 		
 		ItemStack is = new ItemStack(Material.SUGAR);
 		ItemMeta meta = is.getItemMeta();
 		meta.setDisplayName(String.valueOf(errorID));
-		meta.setLore(Arrays.asList("Ignore this, this is an ID", "for the ErrLog plugin to", "use to identify the error"));
+		meta.setLore(Arrays.asList(ChatColor.WHITE + "Ignore this, this is an ID", ChatColor.WHITE + "for the ErrLog plugin to", ChatColor.WHITE + "use to identify the error"));
 		is.setItemMeta(meta);
 		inv.setItem(7, is);
 		return inv;
@@ -153,7 +153,7 @@ public class InventoryHandler implements Listener {
 	private static List<String> errorDetails(Throwable error, boolean simple) {
 		
 		List<String> errorStr = new ArrayList<String>();
-		errorStr.add(ChatColor.YELLOW
+		errorStr.add(ChatColor.GREEN
 				+ error.getCause().getClass().getSimpleName() + ": "
 				+ error.getCause().getMessage());
 		
@@ -174,7 +174,7 @@ public class InventoryHandler implements Listener {
 					errorStr.add(ChatColor.GRAY + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
 				}
 			} else {
-				errorStr.add(ChatColor.YELLOW + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
+				errorStr.add(ChatColor.GREEN + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
 			}
 
 		}

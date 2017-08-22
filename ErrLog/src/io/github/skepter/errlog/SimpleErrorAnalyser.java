@@ -21,17 +21,17 @@ public class SimpleErrorAnalyser {
 		errorDescription.add(ChatColor.WHITE + "");
 		Throwable cause = error.getCause();
 		if(cause instanceof NullPointerException) {
-			errorDescription.add(ChatColor.YELLOW + "NullPointerException");
+			errorDescription.add(ChatColor.GREEN + "NullPointerException:");
 			errorDescription.add(ChatColor.WHITE + " An error which occurs when a variable");
 			errorDescription.add(ChatColor.WHITE + " is not correctly initialised or defined");
 			errorDescription.add(ChatColor.WHITE + "");
 		} else if(cause instanceof ArrayIndexOutOfBoundsException) {
-			errorDescription.add(ChatColor.YELLOW + "ArrayIndexOutOfBoundsException");
+			errorDescription.add(ChatColor.GREEN + "ArrayIndexOutOfBoundsException:");
 			errorDescription.add(ChatColor.WHITE + " An error which occurs when trying");
 			errorDescription.add(ChatColor.WHITE + " to access a list badly");
 			errorDescription.add(ChatColor.WHITE + "");
 		} else {
-			errorDescription.add(ChatColor.YELLOW + cause.getClass().getSimpleName());
+			errorDescription.add(ChatColor.GREEN + cause.getClass().getSimpleName() + ":");
 			errorDescription.add(ChatColor.WHITE + " Some error. Ask Skepter to write a description");
 			errorDescription.add(ChatColor.WHITE + " about this error to know more.");
 			errorDescription.add(ChatColor.WHITE + "");
