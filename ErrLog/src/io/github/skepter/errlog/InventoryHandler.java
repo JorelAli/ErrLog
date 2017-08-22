@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TimeZone;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -70,7 +71,7 @@ public class InventoryHandler implements Listener {
 					});
 					break;
 				}
-				case 3: {
+				case 4: {
 					File file = new File(Main.INSTANCE.getDataFolder(), "errorlog" + errorID + ".txt");
 					try {
 						boolean result = file.createNewFile();
@@ -120,17 +121,23 @@ public class InventoryHandler implements Listener {
 		List<String> pluginDetails = new ArrayList<String>();
 		for(String pluginName : pluginNames) {
 			Plugin plugin = Bukkit.getPluginManager().getPlugin(pluginName);
-			pluginDetails.add(plugin.getName());
-			pluginDetails.add(plugin.getDescription().getVersion());
+			pluginDetails.add(ChatColor.GREEN + plugin.getName());
+			pluginDetails.add(ChatColor.WHITE + " Version: " + plugin.getDescription().getVersion());
+			pluginDetails.add(ChatColor.WHITE + " Authors: " + Arrays.deepToString(plugin.getDescription().getAuthors().toArray()));
 			pluginDetails.add("");
 		}
 		
-		inv.setItem(0, itemGenerator(Material.PAPER, "Plugin details", pluginDetails));
+		inv.setItem(0, itemGenerator(Material.PAPER, "Plugins responsible for error", pluginDetails));
 		inv.setItem(1, itemGenerator(Material.WOOL, "Upload to Hastebin"));
-		inv.setItem(2, itemGenerator(Material.BOOK, "Error details", errorDetails(error)));
-		inv.setItem(3, itemGenerator(Material.BOOK_AND_QUILL, "Save error log to a file"));
-		inv.setItem(6, itemGenerator(Material.WATCH, "Time in which error occured", Arrays.asList(new SimpleDateFormat("hh:mm (ZZ) E d MM yyyy").format(new Date(Main.INSTANCE.errorTimes.get(errorID))))));
-		inv.setItem(8, itemGenerator(Material.BARRIER, "Close error log"));
+		inv.setItem(2, itemGenerator(Material.KNOWLEDGE_BOOK, "Error details (for developers)", errorDetails(error, false)));
+		inv.setItem(3, itemGenerator(Material.BOOK, "Simplified error details (for developers)", errorDetails(error, true))); //TODO fix number
+		inv.setItem(4, itemGenerator(Material.BOOK_AND_QUILL, "Save error log to a file"));
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm (zz) E d MMM yyyy");
+		dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+		
+		inv.setItem(6, itemGenerator(Material.WATCH, "Time in which error occured", Arrays.asList(dateFormat.format(new Date(Main.INSTANCE.errorTimes.get(errorID))))));
+		inv.setItem(8, itemGenerator(Material.BARRIER, "Close"));
 		
 		ItemStack is = new ItemStack(Material.SUGAR);
 		ItemMeta meta = is.getItemMeta();
@@ -142,7 +149,7 @@ public class InventoryHandler implements Listener {
 		
 	}
 	
-	private static List<String> errorDetails(Throwable error) {
+	private static List<String> errorDetails(Throwable error, boolean simple) {
 		
 		List<String> errorStr = new ArrayList<String>();
 		errorStr.add(ChatColor.YELLOW
@@ -162,7 +169,9 @@ public class InventoryHandler implements Listener {
 
 			// Smart name highlighting:
 			if (methodName.startsWith("java") || methodName.startsWith("org.bukkit") || methodName.startsWith("net.minecraft.server")) {
-				errorStr.add(ChatColor.GRAY + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
+				if(!simple) {
+					errorStr.add(ChatColor.GRAY + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
+				}
 			} else {
 				errorStr.add(ChatColor.YELLOW + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
 			}
