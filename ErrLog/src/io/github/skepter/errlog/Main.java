@@ -9,7 +9,9 @@ import java.util.logging.Logger;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.chat.TextComponent;
@@ -34,6 +36,7 @@ public class Main extends JavaPlugin implements Listener {
 		Utils.readFile();
 
 		getServer().getPluginManager().registerEvents(new InventoryHandler(), this);
+		getServer().getPluginManager().registerEvents(this, this);
 
 		Enumeration<String> loggerNames = LogManager.getLogManager().getLoggerNames();
 
@@ -41,8 +44,6 @@ public class Main extends JavaPlugin implements Listener {
 		while (loggerNames.hasMoreElements()) {
 			Logger.getLogger(loggerNames.nextElement()).addHandler(new LoggingHandler());
 		}
-		
-		
 	}
 	
 	protected void openInventories(int errorID) {
@@ -68,7 +69,16 @@ public class Main extends JavaPlugin implements Listener {
 		Utils.writeFile();
 		listeners.clear();
 	}
-
+	
+	@SuppressWarnings("null")
+	@EventHandler
+	public void onEvent(PlayerCommandPreprocessEvent event) {
+		if(event.getMessage().contains("errlogevent")) {
+			String str = null;
+			str.toUpperCase();
+		}
+	}
+	
 	@SuppressWarnings("null")
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

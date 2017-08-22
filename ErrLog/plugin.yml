@@ -1,6 +1,6 @@
 name: ErrLog
 main: io.github.skepter.errlog.Main
-version: 0.8-BETA
+version: 0.9-BETA
 description: Allows you to view the console
 author: Skepter
 website: http://skepter.github.io/

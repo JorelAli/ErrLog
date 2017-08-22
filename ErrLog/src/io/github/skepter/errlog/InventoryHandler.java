@@ -105,7 +105,7 @@ public class InventoryHandler implements Listener {
 		Set<String> pluginNames = new HashSet<String>();
 		for(StackTraceElement st : error.getCause().getStackTrace()) {
 			
-			if(st.getClassName().startsWith("java") || st.getClassName().startsWith("org.bukkit") || st.getClassName().startsWith("net.minecraft.server")) {
+			if(st.getClassName().startsWith("java") || st.getClassName().startsWith("org.bukkit") || st.getClassName().startsWith("net.minecraft.server") || st.getClassName().startsWith("sun")) {
 				continue;
 			}
 			
@@ -130,8 +130,9 @@ public class InventoryHandler implements Listener {
 		inv.setItem(0, itemGenerator(Material.PAPER, "Plugins responsible for error", pluginDetails));
 		inv.setItem(1, itemGenerator(Material.WOOL, "Upload to Hastebin"));
 		inv.setItem(2, itemGenerator(Material.KNOWLEDGE_BOOK, "Error details (for developers)", errorDetails(error, false)));
-		inv.setItem(3, itemGenerator(Material.BOOK, "Simplified error details (for developers)", errorDetails(error, true))); //TODO fix number
+		inv.setItem(3, itemGenerator(Material.BOOK, "Simplified error details (for developers)", errorDetails(error, true))); 
 		inv.setItem(4, itemGenerator(Material.BOOK_AND_QUILL, "Save error log to a file"));
+		inv.setItem(5, SimpleErrorAnalyser.exceptionToString(error));
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm (zz) E d MMM yyyy");
 		dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
@@ -168,7 +169,7 @@ public class InventoryHandler implements Listener {
 					.substring(st.getClassName().lastIndexOf(".") + 1);
 
 			// Smart name highlighting:
-			if (methodName.startsWith("java") || methodName.startsWith("org.bukkit") || methodName.startsWith("net.minecraft.server")) {
+			if (methodName.startsWith("java") || methodName.startsWith("org.bukkit") || methodName.startsWith("net.minecraft.server") || st.getClassName().startsWith("sun")) {
 				if(!simple) {
 					errorStr.add(ChatColor.GRAY + "  " + methodName + "(" + rawClassName + ".java:" + st.getLineNumber() + ")");
 				}
