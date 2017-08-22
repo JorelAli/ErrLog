@@ -30,6 +30,20 @@ public class SimpleErrorAnalyser {
 			errorDescription.add(ChatColor.WHITE + " An error which occurs when trying");
 			errorDescription.add(ChatColor.WHITE + " to access a list badly");
 			errorDescription.add(ChatColor.WHITE + "");
+			
+		} else if(cause instanceof ClassCastException) {
+			errorDescription.add(ChatColor.GREEN + "ClassCastException:");
+			errorDescription.add(ChatColor.WHITE + " An error which occurs when the original");
+			errorDescription.add(ChatColor.WHITE + " developer made a mistake between two variables");
+			errorDescription.add(ChatColor.WHITE + " (e.g. mistaking a skeleton for a player)");
+			errorDescription.add(ChatColor.WHITE + "");			
+		} else if(cause instanceof NoSuchMethodError) {
+			errorDescription.add(ChatColor.GREEN + "NoSuchMethodError:");
+			errorDescription.add(ChatColor.WHITE + " An error which occurs when the code can't find");
+			errorDescription.add(ChatColor.WHITE + " a specific function. Likely due to an old version");
+			errorDescription.add(ChatColor.WHITE + " of a plugin which is incompatible with the");
+			errorDescription.add(ChatColor.WHITE + " latest version of Spigot");
+			errorDescription.add(ChatColor.WHITE + "");
 		} else {
 			errorDescription.add(ChatColor.GREEN + cause.getClass().getSimpleName() + ":");
 			errorDescription.add(ChatColor.WHITE + " Some error. Ask Skepter to write a description");

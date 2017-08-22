@@ -29,7 +29,7 @@ public class InventoryHandler implements Listener {
 
 	@EventHandler
 	public void invClick(InventoryClickEvent event) {
-		if(event.getInventory().getTitle().contains(" Error")) {
+		if(event.getInventory().getTitle().contains("Exception")) {
 			event.setCancelled(true);
 			int errorID = Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
 			Throwable throwable  = Main.INSTANCE.errors.getOrDefault(errorID, null);
@@ -101,7 +101,7 @@ public class InventoryHandler implements Listener {
 	
 	public static Inventory getInventory(int errorID) {
 		Throwable error = Main.INSTANCE.errors.get(errorID);
-		Inventory inv = Bukkit.createInventory(null, 9, error.getCause().getClass().getSimpleName().replace("Exception", " Error"));
+		Inventory inv = Bukkit.createInventory(null, 9, error.getCause().getClass().getSimpleName());
 		Set<String> pluginNames = new HashSet<String>();
 		for(StackTraceElement st : error.getCause().getStackTrace()) {
 			
