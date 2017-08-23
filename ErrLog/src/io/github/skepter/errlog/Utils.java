@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.util.HashSet;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class Utils {
@@ -44,6 +45,15 @@ public class Utils {
 			try {
 				is = connection.getInputStream();
 			} catch(IOException e) {
+				if(e.getMessage() != null) {
+					
+					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.INSTANCE, new Runnable() {
+
+						@Override
+						public void run() {
+							Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE + "] Encountered HTTP response code " + HTTPStatusCode.get(e.getMessage().replaceAll("\\D", "")));
+						}});
+				}
 				return null;
 			}			
 			

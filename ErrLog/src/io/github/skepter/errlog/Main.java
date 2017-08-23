@@ -30,10 +30,9 @@ public class Main extends JavaPlugin implements Listener {
 	HashMap<Integer, String> cachedErrors;
 	HashMap<Integer, Long> errorTimes;
 
+	//horrible static method nonsense
 	public static Main INSTANCE;
 	
-	//errlogs to view all errors since restart
-
 	@Override
 	public void onEnable() {
 		INSTANCE = this;

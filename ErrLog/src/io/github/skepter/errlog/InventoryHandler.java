@@ -33,10 +33,12 @@ public class InventoryHandler implements Listener {
 		int errorID = 0;
 		
 		try {
-			Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
-		} catch(NumberFormatException e) {
+			errorID = Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
+		} catch(Exception e) {
 			return;
 		}
+		
+		final int finalErrorID = errorID;
 
 		if(Main.INSTANCE.errors.containsKey(errorID)) {
 			event.setCancelled(true);
@@ -54,7 +56,8 @@ public class InventoryHandler implements Listener {
 					PrintWriter writer = new PrintWriter(strWriter);
 
 					throwable.printStackTrace(writer);
-					Plugin instance = Main.INSTANCE;
+					
+					Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE + "] Uploading error...");
 					Bukkit.getScheduler().runTaskAsynchronously(Main.INSTANCE, new Runnable() {
 
 						@Override
@@ -63,7 +66,7 @@ public class InventoryHandler implements Listener {
 								String link = Utils.post(strWriter.toString());
 								
 								if(link == null) {
-									Bukkit.getScheduler().runTask(instance, new Runnable() {
+									Bukkit.getScheduler().runTask(Main.INSTANCE, new Runnable() {
 
 										@Override
 										public void run() {
@@ -75,8 +78,8 @@ public class InventoryHandler implements Listener {
 									return;
 								}
 								
-								Main.INSTANCE.cachedErrors.put(errorID, link);
-								Bukkit.getScheduler().runTask(instance, new Runnable() {
+								Main.INSTANCE.cachedErrors.put(finalErrorID, link);
+								Bukkit.getScheduler().runTask(Main.INSTANCE, new Runnable() {
 
 									@Override
 									public void run() {
