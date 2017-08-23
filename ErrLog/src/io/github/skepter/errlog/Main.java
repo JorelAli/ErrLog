@@ -1,11 +1,15 @@
 package io.github.skepter.errlog;
 
+import java.text.SimpleDateFormat;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.TimeZone;
+import java.util.Map.Entry;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -14,6 +18,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 
 public class Main extends JavaPlugin implements Listener {
@@ -77,14 +84,17 @@ public class Main extends JavaPlugin implements Listener {
 	
 	@SuppressWarnings("null")
 	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {	
+		Player player = null;
+		if(sender instanceof Player) {
+			player = (Player) sender;
+		}
 		if (label.equalsIgnoreCase("errlog")) {
 			if (!(sender instanceof Player)) {
 				sender.sendMessage("Console cannot use this command.");
 				return true;
 			}
 
-			Player player = (Player) sender;
 			if (!player.hasPermission("errlog.use") || !player.isOp()) {
 				player.sendMessage("You do not have permission to use this command.");
 				return true;
@@ -96,10 +106,10 @@ public class Main extends JavaPlugin implements Listener {
 			// Toggle
 			if (args.length == 0) {
 				if (listeners.contains(player)) {
-					player.sendMessage("You are no longer viewing console");
+					player.sendMessage("You are no longer viewing error logs");
 					listeners.remove(player);
 				} else {
-					player.sendMessage("You are now viewing console");
+					player.sendMessage("You are now viewing error logs");
 					listeners.add(player);
 				}
 				return true;
@@ -109,13 +119,13 @@ public class Main extends JavaPlugin implements Listener {
 			if (args.length == 1) {
 				if (args[0].equalsIgnoreCase("on")) {
 					if (!listeners.contains(player)) {
-						player.sendMessage("You are now viewing console");
+						player.sendMessage("You are now viewing error logs");
 						listeners.add(player);
 					}
 					return true;
 				} else if (args[0].equalsIgnoreCase("off")) {
 					if (listeners.contains(player)) {
-						player.sendMessage("You are no longer viewing console");
+						player.sendMessage("You are no longer viewing error logs");
 						listeners.remove(player);
 					}
 					return true;
@@ -130,52 +140,39 @@ public class Main extends JavaPlugin implements Listener {
 					return false;
 				}
 			}
-		} else if (label.equalsIgnoreCase("errupload")) {
+		} else if (label.equalsIgnoreCase("errview")) {
+			if (!(sender instanceof Player)) {
+				sender.sendMessage("Console cannot use this command.");
+				return true;
+			}
 			if (args.length != 1) {
 				sender.sendMessage("Argument length incorrect");
 				return true;
 			}
-
 			int errorID = Integer.parseInt(args[0]);
-			((Player) sender).openInventory(InventoryHandler.getInventory(errorID));
+			player.openInventory(InventoryHandler.getInventory(errorID));
 			return true;
-//			Throwable throwable = errors.getOrDefault(errorID, null);
-//
-//			if (throwable == null) {
-//				sendToListeners(
-//						"[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE + "] " + cachedErrors.get(errorID));
-//				return true;
-//			}
-//
-//			// remove int from errors or something?
-//			StringWriter strWriter = new StringWriter();
-//			PrintWriter writer = new PrintWriter(strWriter);
-//
-//			throwable.printStackTrace(writer);
-//			Plugin instance = this;
-//			Bukkit.getScheduler().runTaskAsynchronously(this, new Runnable() {
-//
-//				@Override
-//				public void run() {
-//					try {
-//						String link = Utils.post(strWriter.toString());
-//						cachedErrors.put(errorID, link);
-//						errors.remove(errorID);
-//						Bukkit.getScheduler().runTask(instance, new Runnable() {
-//
-//							@Override
-//							public void run() {
-//								sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE
-//										+ "] Error uploaded: " + link);
-//							}
-//
-//						});
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//
-//			});
+		}  else if (label.equalsIgnoreCase("errlogs")) {
+			if (!(sender instanceof Player)) {
+				sender.sendMessage("Console cannot use this command.");
+				return true;
+			}
+			player.sendMessage("[" + ChatColor.YELLOW + "Error logs" + ChatColor.WHITE + "] Found " + errors.size() + " errors");
+			for(Entry<Integer, Throwable> entry : errors.entrySet()) {
+				
+				SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm (zz) E d MMM yyyy");
+				dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+				
+				TextComponent message = new TextComponent(" [" + ChatColor.YELLOW
+						+ entry.getValue().getClass().getSimpleName() + ChatColor.WHITE + "] " + dateFormat.format(errorTimes.get(entry.getKey())));
+
+				String componentString = "Click to view error log interface";
+				message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
+						new ComponentBuilder(componentString).create()));
+				message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/errview " + entry.getKey()));
+				player.spigot().sendMessage(message);
+			}
+			return true;
 		}
 		return true;
 	}

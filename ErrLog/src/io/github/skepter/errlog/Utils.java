@@ -17,7 +17,8 @@ import org.bukkit.entity.Player;
 public class Utils {
 
 	/*
-	 * Uploads inputString to hastebin then returns the link to the haste
+	 * Uploads inputString to hastebin then returns the link to the haste,
+	 * if an error occurs, returns null
 	 */
 	public static String post(String inputString) throws IOException {
 		InputStream is = null;
@@ -39,8 +40,13 @@ public class Utils {
 			os = connection.getOutputStream();
 			os.write(content);
 			os.close();
-			// Thread.sleep(5000);
-			is = connection.getInputStream();
+			
+			try {
+				is = connection.getInputStream();
+			} catch(IOException e) {
+				return null;
+			}			
+			
 			final byte[] buffer = new byte[2 * 1024];
 			baos = new ByteArrayOutputStream();
 			int n;
@@ -49,10 +55,12 @@ public class Utils {
 			}
 			data = baos.toByteArray();
 		} catch (Exception e) {
-			e.printStackTrace();
+			return null;
 		} finally {
-			is.close();
-			baos.close();
+			if(is != null)
+				is.close();
+			if(baos != null)
+				baos.close();
 		}
 		String returnStr = new String(data);
 		return "https://hastebin.com/" + returnStr.substring(8, returnStr.length() - 2) + ".java";

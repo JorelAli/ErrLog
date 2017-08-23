@@ -29,9 +29,17 @@ public class InventoryHandler implements Listener {
 
 	@EventHandler
 	public void invClick(InventoryClickEvent event) {
-		if(event.getInventory().getTitle().contains("Exception")) {
+		
+		int errorID = 0;
+		
+		try {
+			Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
+		} catch(NumberFormatException e) {
+			return;
+		}
+
+		if(Main.INSTANCE.errors.containsKey(errorID)) {
 			event.setCancelled(true);
-			int errorID = Integer.parseInt(event.getInventory().getItem(7).getItemMeta().getDisplayName());
 			Throwable throwable  = Main.INSTANCE.errors.getOrDefault(errorID, null);
 			switch(event.getSlot()) {
 				case 1: {
@@ -53,6 +61,20 @@ public class InventoryHandler implements Listener {
 						public void run() {
 							try {
 								String link = Utils.post(strWriter.toString());
+								
+								if(link == null) {
+									Bukkit.getScheduler().runTask(instance, new Runnable() {
+
+										@Override
+										public void run() {
+											Main.INSTANCE.sendToListeners("[" + ChatColor.YELLOW + "Hastebin" + ChatColor.WHITE
+													+ "] Error could not be uploaded :/");
+										}
+
+									});
+									return;
+								}
+								
 								Main.INSTANCE.cachedErrors.put(errorID, link);
 								Bukkit.getScheduler().runTask(instance, new Runnable() {
 
@@ -101,7 +123,12 @@ public class InventoryHandler implements Listener {
 	
 	public static Inventory getInventory(int errorID) {
 		Throwable error = Main.INSTANCE.errors.get(errorID);
-		Inventory inv = Bukkit.createInventory(null, 9, error.getCause().getClass().getSimpleName());
+		Inventory inv = null;
+		if(error.getCause() == null) {
+			Bukkit.createInventory(null, 9, "Unknown error");
+		} else {
+			inv = Bukkit.createInventory(null, 9, error.getCause().getClass().getSimpleName());
+		}
 		Set<String> pluginNames = new HashSet<String>();
 		for(StackTraceElement st : error.getCause().getStackTrace()) {
 			
