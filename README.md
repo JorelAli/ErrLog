@@ -63,6 +63,7 @@ An error ID used by the plugin to keep track of the error internally (ignore thi
 
 #### Close
 Closes the inventory
+
 ![alt text](https://github.com/Skepter/ErrLog/blob/master/images/close.PNG "")
 
 Installation
